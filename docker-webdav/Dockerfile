@@ -158,7 +158,7 @@ RUN set -eux; \
 # Joe Orton (Release Signing Key) <jorton@apache.org>
 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 \
 	; do \
-		gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; \
 	done; \
 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; \
 	command -v gpgconf && gpgconf --kill all || :; \
